@@ -14,7 +14,7 @@
     <name>nico</name>
     <description>Portfolio de Nico</description>
     <properties>
-        <java.version>19</java.version>
+        <java.version>1.8</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -53,12 +53,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-        <!--    <scope>test</scope> -->
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
-            <version>3.1.0</version>
+        <!--    <version>3.1.0</version> -->
             <type>jar</type>
         </dependency>
         <dependency>
