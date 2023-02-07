@@ -6,6 +6,7 @@ com\miportfolio\nico\Entity\Educacion.class
 com\miportfolio\nico\Repository\IPersonaRepository.class
 com\miportfolio\nico\Security\Dto\LoginUsuario.class
 com\miportfolio\nico\Security\Entity\UsuarioPrincipal.class
+com\miportfolio\nico\Service\SHyS.class
 com\miportfolio\nico\Security\Entity\Rol.class
 com\miportfolio\nico\Security\Dto\JwtDto.class
 com\miportfolio\nico\Security\jwt\JwtEntryPoint.class
@@ -15,11 +16,14 @@ com\miportfolio\nico\Security\Service\RolService.class
 com\miportfolio\nico\Entity\Persona.class
 com\miportfolio\nico\Interface\IPersonaService.class
 com\miportfolio\nico\Controller\CEducacion.class
+com\miportfolio\nico\Repository\RHyS.class
 com\miportfolio\nico\Service\ImpPersonaService.class
 com\miportfolio\nico\NicoApplication.class
 com\miportfolio\nico\Repository\RExperiencia.class
 com\miportfolio\nico\Security\Service\UsuarioService.class
+com\miportfolio\nico\Controller\CHyS.class
 com\miportfolio\nico\Controller\PersonaController.class
+com\miportfolio\nico\Entity\HyS.class
 com\miportfolio\nico\Service\SEducacion.class
 com\miportfolio\nico\Entity\Experiencia.class
 com\miportfolio\nico\Security\jwt\JwtProvider.class
@@ -31,5 +35,6 @@ com\miportfolio\nico\Security\Repository\iUsuarioRepository.class
 com\miportfolio\nico\Security\Entity\Usuario.class
 com\miportfolio\nico\Controller\CExperiencia.class
 com\miportfolio\nico\dto\dtoExperiencia.class
+com\miportfolio\nico\dto\dtoHyS.class
 com\miportfolio\nico\dto\dtoEducacion.class
 com\miportfolio\nico\Security\jwt\JwtTokenFilter.class
