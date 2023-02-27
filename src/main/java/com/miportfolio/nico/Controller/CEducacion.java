@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/educacion")
-//@CrossOrigin(origins="http://localhost:4200")
-@CrossOrigin(origins = "https://nicoportfolioweb.web.app/")
+@CrossOrigin(origins="http://localhost:4200")
+//@CrossOrigin(origins = "https://nicoportfolioweb.web.app/")
 public class CEducacion {
     @Autowired
     SEducacion sEducacion;
@@ -61,12 +61,12 @@ public class CEducacion {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
         
-        if(sEducacion.existsByNombreE(dtoeducacion.getNombreE())){
-            return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
-        }
+        //if(sEducacion.existsByNombreE(dtoeducacion.getNombreE())){
+        //    return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
+        //}
         
         Educacion educacion= new Educacion(
-            dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE()
+            dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE(), dtoeducacion.getUrl(), dtoeducacion.getPath()
         );
         
         sEducacion.save(educacion);

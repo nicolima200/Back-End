@@ -10,6 +10,8 @@ public class dtoExperiencia {
     @NotBlank
     private String descripcionE;
     
+    private String url;
+    private String path;
     //private String nomYDescE;
     
     
@@ -17,10 +19,12 @@ public class dtoExperiencia {
     public dtoExperiencia() {
     }
 
-    public dtoExperiencia(String nombreE, String descripcionE) {
+    public dtoExperiencia(String nombreE, String descripcionE, String url, String path) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
-        //this.nomYDescE=this.nombreE+this.descripcionE;
+        this.url=url;
+        this.path=path;
+        
     }
     
     //getters&setters
@@ -41,9 +45,22 @@ public class dtoExperiencia {
         this.descripcionE = descripcionE;
     }
 
-    //public String getNomYDescE() {
-    //    return nomYDescE;
-    //}
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
     
     
     

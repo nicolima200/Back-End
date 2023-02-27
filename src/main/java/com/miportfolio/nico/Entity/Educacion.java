@@ -16,13 +16,17 @@ public class Educacion {
     private int id;
     private String nombreE;
     private String descripcionE;
+    private String url;
+    public String path;
 
     public Educacion() {
     }
 
-    public Educacion(String nombreE, String descripcionE) {
+    public Educacion(String nombreE, String descripcionE, String url, String path) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.url=url;
+        this.path=path;
     }
 
     public int getId() {
@@ -47,6 +51,22 @@ public class Educacion {
 
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
  
     

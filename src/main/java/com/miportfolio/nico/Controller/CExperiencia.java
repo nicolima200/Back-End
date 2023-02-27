@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/explab")
-//@CrossOrigin(origins = {"http://localhost:4200"})
-@CrossOrigin(origins = "https://nicoportfolioweb.web.app/")
+@CrossOrigin(origins = {"http://localhost:4200"})
+//@CrossOrigin(origins = "https://nicoportfolioweb.web.app/")
 public class CExperiencia {
 
     @Autowired
@@ -58,7 +58,7 @@ public class CExperiencia {
         //    return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
         //}
 
-        Experiencia experiencia = new Experiencia(dtoExp.getNombreE(), dtoExp.getDescripcionE());
+        Experiencia experiencia = new Experiencia(dtoExp.getNombreE(), dtoExp.getDescripcionE(), dtoExp.getUrl(), dtoExp.getPath());
         sExperiencia.save(experiencia);
 
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
