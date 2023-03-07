@@ -1,3 +1,4 @@
+com\miportfolio\nico\dto\dtoPersona.class
 com\miportfolio\nico\Security\Controller\AuthController.class
 com\miportfolio\nico\Security\Controller\Mensaje.class
 com\miportfolio\nico\Security\Dto\NuevoUsuario.class

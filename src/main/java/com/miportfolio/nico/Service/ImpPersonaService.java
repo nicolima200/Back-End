@@ -1,35 +1,42 @@
 package com.miportfolio.nico.Service;
 
 import com.miportfolio.nico.Entity.Persona;
-import com.miportfolio.nico.Interface.IPersonaService;
+
 import com.miportfolio.nico.Repository.IPersonaRepository;
+import jakarta.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ImpPersonaService implements IPersonaService {
+@Transactional
+public class ImpPersonaService{
     @Autowired IPersonaRepository ipersonaRepository;
     
-    @Override
-    public List<Persona> getPersona() {
-        List<Persona> persona = ipersonaRepository.findAll();
-        return persona;
+    //@Override
+    //public List<Persona> getPersona() {
+      //  List<Persona> persona = ipersonaRepository.findAll();
+        //return persona;
+    //}
+    public List<Persona> list(){
+        return ipersonaRepository.findAll();
     }
-
-    @Override
+    
     public void savePersona(Persona persona) {
         ipersonaRepository.save(persona); 
     }
 
-    @Override
+    
     public void deletePersona(Long id) {
         ipersonaRepository.deleteById(id);
        }
 
-    @Override
-    public Persona findPersona(Long id) {
-        Persona persona = ipersonaRepository.findById(id).orElse(null);
-        return persona;
+    
+    public Optional<Persona> getOne(int id) {
+      return  ipersonaRepository.findById(id);
     }
+    
+    
+    
 }
